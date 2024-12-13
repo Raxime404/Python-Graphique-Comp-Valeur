@@ -1,0 +1,38 @@
+VERSION 1 :
+
+import matplotlib.pyplot as plt
+
+serie1 = [1.237, 1.235, 0.899, 1.039, 1.03, 1.348, 0.681, 1.115, 1.216, 1.003, 1.178, 0.864, 1.179]
+serie2 = [1.346, 1.224, 1.416, 1.24, 0.801, 0.971, 1.151, 0.987, 0.761, 1.07, 0.616, 0.876, 0.597]
+
+plt.plot(serie1)
+plt.plot(serie2)
+plt.title('Comparaison des deux séries de valeurs')
+plt.xlabel('Indice')
+plt.ylabel('Valeur (mm)') # Ajouté l'unité 'mm' pour clarté
+# Définition des limites spécifiques sur l'axe Y
+plt.ylim(-1.4, 2.4)
+plt.legend(['Série 1', 'Série 2'])
+plt.show()
+
+
+VERSION 2 : 
+
+import matplotlib.pyplot as plt
+
+serie1 = [1.237, 1.235, 0.899, 1.039, 1.03, 1.348, 0.681, 1.115, 1.216, 1.003, 1.178, 0.864, 1.179]
+serie2 = [1.346, 1.224, 1.416, 1.24, 0.801, 0.971, 1.151, 0.987, 0.761, 1.07, 0.616, 0.876, 0.597]
+
+X = range(len(serie1))
+serie_1 = serie1
+serie_2 = serie2
+
+plt.plot(x, serie_1, marker='o', color='blue')  # première série
+plt.plot(x, serie_2, marker='o', color='red')    # deuxième série
+
+plt.title("Comparaison des séries 1 et 2")
+plt.xlabel("Numéro de pièce")
+plt.ylabel("Valeurs (mm)")
+plt.ylim(-1.4, 2.4)
+plt.legend(['Série 1', 'Série 2'])
+plt.show()
